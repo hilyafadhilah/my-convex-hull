@@ -209,7 +209,7 @@ class myConvexHull:
             det = 0 : on the line itself
             det < 0 : right side of the line
         """
-        if self._isNdEqual(point, line[0]) or self._isNdEqual(point, line[1]):
+        if self._isPointEqual(point, line[0]) or self._isPointEqual(point, line[1]):
             # Optimization and for rounding errors
             return 0.0
         return np.linalg.det([np.append(line[0], [1.0]), np.append(line[1], [1.0]), np.append(point, [1.0])])
@@ -260,8 +260,8 @@ class myConvexHull:
 
         return np.arccos(dot)
 
-    def _isNdEqual(self, p1: np.ndarray, p2: np.ndarray):
-        return p1.tolist() == p2.tolist()
+    def _isPointEqual(self, p1: np.ndarray, p2: np.ndarray):
+        return p1[0] == p2[0] and p1[1] == p2[1]
 
     def _addSolution(self, line: _LINE_T):
         for p in line:
