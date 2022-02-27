@@ -31,6 +31,9 @@ xAxis = inputInt('X Axis>', 1, len(properties)) - 1
 yAxis = inputInt('Y Axis>', 1, len(properties), exclude=[xAxis + 1]) - 1
 
 displayHeader('Results will be shown shortly')
+print('   Note: The colors are chosen and random. In order\n'
+      '         to get suitable colors, run this program over\n'+
+      '         and over until you get the best results.')
 
 # Create dataframe
 df = pd.DataFrame(data.data, columns=data.feature_names) 

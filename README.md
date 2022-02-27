@@ -25,6 +25,10 @@ $ pipenv install
 $ pipenv run py src/main.py
 ```
 
+Note: Warna grafik yang dihasilkan adalah random, sehingga untuk
+mendapatkan warna yang enak dipandang jalankan program beberapa kali
+hingga didapat hasil yang memuaskan.
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
